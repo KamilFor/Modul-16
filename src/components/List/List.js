@@ -10,15 +10,16 @@ class List extends React.Component {
   static propTypes = {
     title: PropTypes.node.isRequired,
     description: PropTypes.node,
-    columns: PropTypes.array
+    columns: PropTypes.array,
+    src: PropTypes.node,
   };
 
   static defaultProps = {
-    description: settings.defaultListDescription
+    description: settings.defaultListDescription,
   };
 
   state = {
-    columns: this.props.columns || []
+    columns: this.props.columns || [],
   };
 
   //Metoda Add column
@@ -30,9 +31,9 @@ class List extends React.Component {
           key: state.columns.length ? state.columns[state.columns.length - 1].key + 1 : 0,
           title,
           icon: 'list-alt',
-          cards: []
-        }
-      ]
+          cards: [],
+        },
+      ],
     }));
   }
 

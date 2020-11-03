@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 
 class Hero extends React.Component {
+  static propTypes = {
+    src: PropTypes.node,
+  };
   render() {
     return (
       <header className={styles.component}>
@@ -15,7 +18,7 @@ class Hero extends React.Component {
 }
 
 Hero.propTypes = {
-  titleText: PropTypes.node.isRequired
+  titleText: PropTypes.node.isRequired,
 };
 
 export default Hero;

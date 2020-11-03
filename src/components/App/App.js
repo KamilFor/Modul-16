@@ -9,12 +9,8 @@ class App extends React.Component {
       <main className={styles.component}>
         <h1 className={styles.title}>{pageContents.title}</h1>
         <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
-        <List
-          title={['Things to do ', <sup>soon!</sup>]}
-          src={'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png'}
-          {...listData}
-        >
-          <p>I'm planning on doing all these things sooner, rather than later!</p>
+        <List title={'Things to do '} src={'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png'} {...listData}>
+          <p>Im planning on doing all these things sooner, rather than later!</p>
         </List>
       </main>
     );
