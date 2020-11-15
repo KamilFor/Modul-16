@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from './Column.scss';
 import Card from '../Card/Card.js';
-import Creator from '../Creator/Creator.js';
+//import Creator from '../Creator/Creator.js';
 import Icon from '../Icon/Icon.js';
-import { settings } from '../../data/dataStore';
 import PropTypes from 'prop-types';
 
 class Column extends React.Component {
@@ -18,7 +17,7 @@ class Column extends React.Component {
   };
 
   //Metoda Add sssss
-  addCard(title) {
+  /*  addCard(title) {
     this.setState((state) => ({
       card: [
         ...state.card,
@@ -28,19 +27,21 @@ class Column extends React.Component {
         },
       ],
     }));
-  }
+  }*/
 
   render() {
+    const { title, icon, cards } = this.props;
     return (
       <div className={styles.component}>
         <h3 className={styles.title}>
           <span className='icon'>
-            <Icon name={this.state.icon} />
+            <Icon name={icon} />
           </span>
-          {this.props.title}
+          {title}
         </h3>
-        {this.state.card.map(({ key, ...cardProps }) => <Card key={key} {...cardProps} />)}
-        <Creator text={settings.cardCreatorText} action={(title) => this.addCard(title)} />
+        {cards.map((cardData) => <Card key={cardData.id} {...cardData} />)}
+        {/*{this.state.card.map(({ key, ...cardProps }) => <Card key={key} {...cardProps} />)}
+        <Creator text={settings.cardCreatorText} action={(title) => this.addCard(title)} /> */}
       </div>
     );
   }
