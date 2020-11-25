@@ -38,7 +38,6 @@ class Column extends React.Component {
 
   render() {
     const { title, icon, cards, addCard } = this.props;
-    console.log(icon);
     return (
       <div className={styles.component}>
         <h3 className={styles.title}>
@@ -48,7 +47,7 @@ class Column extends React.Component {
           {title}
         </h3>
         {cards.map((cardData) => <Card key={cardData.id} {...cardData} />)}
-        {this.state.card.map(({ key, ...cardProps }) => <Card key={key} {...cardProps} />)}
+        {/* {this.state.card.map(({ key, ...cardProps }) => <Card key={key} {...cardProps} />)} */}
         <Creator text={settings.cardCreatorText} action={addCard} />
       </div>
     );
