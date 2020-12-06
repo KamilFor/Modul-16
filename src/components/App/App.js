@@ -3,7 +3,6 @@ import styles from './App.scss';
 import PropTypes from 'prop-types';
 //import List from '../List/List.js';
 import ListContainer from '../List/ListContainer.js';
-//import { pageContents, listData } from '../../data/dataStore';
 import Search from '../Search/SearchContainer';
 
 class App extends React.Component {
