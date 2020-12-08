@@ -12,7 +12,7 @@ const mapDispatchToProps = (dispatch, props) => ({
   addCard: (title) =>
     dispatch(
       createActionAddCards({
-        columnsId: props.id,
+        columnId: props.id,
         title,
       })
     ),

@@ -2,7 +2,6 @@ import React from 'react';
 import Hero from '../Hero/Hero';
 import Container from '../Container/Container';
 import { listData, faqinfo } from '../../data/dataStore';
-console.log(faqinfo);
 
 const FAQ = () => (
   <Container>
