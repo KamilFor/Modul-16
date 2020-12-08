@@ -8,7 +8,7 @@ export const countAllCards = ({ cards }) => cards.length;
 
 // action name creator
 const reducerName = 'search';
-const createAction_changeSearchString = (name) => `app/${reducerName}/${name}`;
+export const createAction_changeSearchString = (name) => `app/${reducerName}/${name}`;
 
 // actions types
 export const ADD_SEARCH = createAction_changeSearchString('ADD_SEARCH');
